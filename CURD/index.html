@@ -23,7 +23,6 @@
 		<div class="form-group">
 			<input type="hidden" name="sno" ng-model="sno"/><br/>
 		</div>
-		
 		<div class="form-group">
 			<label  for="Enter Name">Enter Name:</label>
 			<input class="form-control" type="text" name="name" ng-model="name"/>
@@ -88,10 +87,7 @@
                    console.error(error);
 
                });
-           }
-		   
-		   
-		   
+           }  
 		//edit the data
 		$scope.editData = function(sno){
 			$http.get('php/editedata.php?sno=' + sno).success(function(data){
@@ -105,9 +101,6 @@
 				
 			});
 		}
-		
-		
-		
 		//Update the Data
 		
 		$scope.updateData=function(){
@@ -129,10 +122,7 @@
 
                });
           }
-		
-		
-		
-		//delete data
+          //delete data
 		
 		$scope.deleteData=function(sno){
 		$http.delete('php/deletedata.php?sno=' + sno).then(function(response){
@@ -152,11 +142,6 @@
 		});
 		   
        });
-	   
-	
-
-
-
 </script>
 
 </body>
